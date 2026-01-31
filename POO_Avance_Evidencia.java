@@ -11,10 +11,10 @@ public class POO_Avance_Evidencia {
             int id;
 
             public void registrarUsuario(Scanner sc) {
-                System.out.println("Ingrese nombre del usuario:");
+                System.out.println("Ingrese el nombre del usuario ");
                 nombre = sc.nextLine();
 
-                System.out.println("Ingrese ID:");
+                System.out.println("Ingrese la ID correspondiente ");
                 id = sc.nextInt();
                 sc.nextLine();
             }
@@ -41,3 +41,30 @@ public class POO_Avance_Evidencia {
                 isbn = sc.nextLine();
             }
 
+            public void prestar() {
+                disponible = false;
+                System.out.println("Libro prestado");
+            }
+
+            public void devolver() {
+                disponible = true;
+                System.out.println("Libro devuelto");
+            }
+        }
+
+        public class Prestamo {
+            String fechaInicio;
+            String fechaFin;
+
+            public void registrarPrestamo(Scanner sc) {
+                System.out.println("Ingrese fecha inicio:");
+                fechaInicio = sc.nextLine();
+
+                System.out.println("Ingrese fecha fin:");
+                fechaFin = sc.nextLine();
+            }
+
+            public void finalizarPrestamo() {
+                System.out.println("Prestamo finalizado");
+            }
+        }
