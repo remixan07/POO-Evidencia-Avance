@@ -1,70 +1,64 @@
+//seis dias cuatro jaquqeqas y varias horas despues, esto espero este bien o por lo menos decente (no olvidar borrar esgto, eres capas de olvidarlo jose)
+//creo qu no era tan dificl, es solo que me compico yo solo, o quiza si y esto este mal hechio, ni idea, segun yo esta bien
+// de algo sirve desahogarse en el codigo
+//NO OLVIDAR BORRQR
+
 import java.util.Scanner;
 
+//libor
+class Book {
+    String book_title;
+    String book_author;
+}
+
+//usuario
+class User {
+    String user_name;
+    int user_id;
+}
+
+//prestamo
+class Loan {
+    String loan_start_date;
+    String loan_end_date;
+}
+
+//main
 public class POO_Avance_Evidencia {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        int option;
 
-        public class Usuario {
-            String nombre;
-            int id;
+        do {
+            System.out.println("\n=== MAIN MENU ===");
+            System.out.println("1. Libro");
+            System.out.println("2. Usuario");
+            System.out.println("3. Préstamo");
+            System.out.println("0. Salir");
+            System.out.print("Usted ha seleccionado ");
 
-            public void registrarUsuario(Scanner sc) {
-                System.out.println("Ingrese el nombre del usuario ");
-                nombre = sc.nextLine();
+            option = sc.nextInt();
 
-                System.out.println("Ingrese la ID correspondiente ");
-                id = sc.nextInt();
-                sc.nextLine();
+            if (option == 1) {
+                System.out.println("Libro");
+
+            } else if (option == 2) {
+                System.out.println("Usuario");
+
+            } else if (option == 3) {
+                System.out.println("Préstamo");
+
+            } else if (option == 0) {
+                System.out.println("Salir");
+
+            } else {
+                System.out.println("Eta opción es inválida, limítese a seleccionar alguna de las disponibles");
             }
 
-            public void mostrarUsuario() {
-                System.out.println("Usuario: " + nombre + " ID: " + id);
-            }
-        }
+        } while (option != 0);
 
-        public class Libro {
-            String titulo;
-            String autor;
-            String isbn;
-            boolean disponible = true;
-
-            public void registrarLibro(Scanner sc) {
-                System.out.println("Ingrese titulo del libro:");
-                titulo = sc.nextLine();
-
-                System.out.println("Ingrese autor:");
-                autor = sc.nextLine();
-
-                System.out.println("Ingrese ISBN:");
-                isbn = sc.nextLine();
-            }
-
-            public void prestar() {
-                disponible = false;
-                System.out.println("Libro prestado");
-            }
-
-            public void devolver() {
-                disponible = true;
-                System.out.println("Libro devuelto");
-            }
-        }
-
-        public class Prestamo {
-            String fechaInicio;
-            String fechaFin;
-
-            public void registrarPrestamo(Scanner sc) {
-                System.out.println("Ingrese fecha inicio:");
-                fechaInicio = sc.nextLine();
-
-                System.out.println("Ingrese fecha fin:");
-                fechaFin = sc.nextLine();
-            }
-
-            public void finalizarPrestamo() {
-                System.out.println("Prestamo finalizado");
-            }
-        }
+        sc.close();
+    }
+}
