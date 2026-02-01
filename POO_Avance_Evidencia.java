@@ -1,29 +1,24 @@
-//seis dias cuatro jaquqeqas y varias horas despues, esto espero este bien o por lo menos decente (no olvidar borrar esgto, eres capas de olvidarlo jose)
-//creo qu no era tan dificl, es solo que me compico yo solo, o quiza si y esto este mal hechio, ni idea, segun yo esta bien
-// de algo sirve desahogarse en el codigo
-//NO OLVIDAR BORRQR
-
 import java.util.Scanner;
 
-//libor
+//LIBRO
 class Book {
     String book_title;
     String book_author;
 }
 
-//usuario
+//USUARIO
 class User {
     String user_name;
     int user_id;
 }
 
-//prestamo
+//PRESTAMO
 class Loan {
     String loan_start_date;
     String loan_end_date;
 }
 
-//main
+//MAIN
 public class POO_Avance_Evidencia {
 
     public static void main(String[] args) {
